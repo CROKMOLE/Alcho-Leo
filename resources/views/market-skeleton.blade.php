@@ -16,15 +16,17 @@
     @endif
 </head>
 <body
-    class="bg-emerald-200  text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-<div
-    class="">
-    <main class="">
-        <div class="bg-red-600">
-{{--            {{view($page)}}--}}
-            {{$page}}
-        </div>
-    </main>
+    class="bg-gray-800  text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
+<div class="">
+    <div class="up_block: bg-orange-400 text-decoration-neutral-200 flex p-3">
+
+        <main class="">
+            <div class="bg-red-600">
+                {{view($page)}}
+                {{$page}}
+            </div>
+        </main>
+    </div>
 </div>
 </body>
 </html>
