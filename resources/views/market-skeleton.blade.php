@@ -22,8 +22,8 @@
 
         <main class="">
             <div class="bg-red-600">
-                {{view($page)}}
-                {{$page}}
+                @include($page)
+{{--                {{$page}}--}}
             </div>
         </main>
     </div>

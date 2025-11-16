@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,3 +15,8 @@ Route::get('/tt', function () {
         'page' => 'market-pages.w'
     ]);
 });
+
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/products', 'index');
+});
+

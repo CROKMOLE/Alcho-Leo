@@ -17,6 +17,7 @@ class ProductForm
                 Section::make('Primary Data')
                     ->schema([
                         FileUpload::make('picture')
+                            ->disk('public')
                             ->directory('images')
                             ->image(),
 //                            ->acceptedFileTypes([
