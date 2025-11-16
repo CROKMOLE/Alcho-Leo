@@ -16,12 +16,13 @@
     @endif
 </head>
 <body
-    class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] dark:text-[#f2f2f2] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
+    class="bg-emerald-200  text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
 <div
     class="">
     <main class="">
         <div class="bg-red-600">
-            hello world
+{{--            {{view($page)}}--}}
+            {{$page}}
         </div>
     </main>
 </div>
