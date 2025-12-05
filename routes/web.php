@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,4 +20,11 @@ Route::get('/tt', function () {
 Route::controller(ProductController::class)->group(function () {
     Route::get('/products', 'index');
 });
+
+Route::post('/theme', function (Request $request) {
+    $current = session('theme', 'light');
+    $newTheme = $current === 'light' ? 'dark' : 'light';
+    session(['theme' => $newTheme]);
+    return redirect()->back();
+})->name('theme.toggle');
 
