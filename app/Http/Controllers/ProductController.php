@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::query()->limit(10)->get(); // 10 записей на страницу
+        $products = Product::query()->paginate(5); // 10 записей на страницу
 
         return view('market-skeleton', [
             'page' => 'market-pages.product-list',
