@@ -16,4 +16,10 @@ class Product extends Model
         'description',
         'picture',
     ];
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
 }

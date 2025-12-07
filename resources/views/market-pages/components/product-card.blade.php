@@ -3,7 +3,6 @@
                         bg-gray-100 dark:bg-gray-700
                         transition-shadow duration-300 hover:shadow-2xl">
 
-    <!-- Квадратная картинка -->
     <div class="relative overflow-visible mb-4 aspect-square">
         <img
             src="{{ asset('storage/' . $product->picture) }}"
@@ -12,12 +11,16 @@
         >
     </div>
 
-    <!-- ✅ Название (div вместо h2) -->
     <div class="font-bold text-xl mb-1 leading-snug text-gray-900 dark:text-gray-100">
         {{ $product->title }}
     </div>
+    @if($product->tags?->count())
+        <div class="flex flex-wrap gap-1 mb-2">
+            @include('filament.columns.tags', ['record' => $product])
+        </div>
+    @endif
 
-    <!-- ✅ Год (div вместо p) -->
+    <!-- ✅ Год -->
     <div class="text-gray-600 dark:text-gray-300 text-base mb-4">
         {{ $product->year }}
     </div>
@@ -40,3 +43,5 @@
     </button>
 
 </div>
+
+

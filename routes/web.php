@@ -18,7 +18,9 @@ Route::get('/tt', function () {
 });
 
 Route::controller(ProductController::class)->group(function () {
-    Route::get('/products', 'index');
+//    Route::get('/products', 'index');
+    Route::get('/search', 'search');
+    Route::get('/products', 'index')->name('products.index');
 });
 
 Route::post('/theme', function (Request $request) {
@@ -27,4 +29,6 @@ Route::post('/theme', function (Request $request) {
     session(['theme' => $newTheme]);
     return redirect()->back();
 })->name('theme.toggle');
+
+
 

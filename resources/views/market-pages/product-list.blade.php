@@ -1,13 +1,17 @@
-@include('market-pages.product-details')
+@include('market-pages.components.product-details')
+
 
 <div class="container mx-auto">
 
-    <h1 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+    <h1 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
         Products
     </h1>
+
+    @include('market-pages.components.filter-tags')
+
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 overflow-visible">
         @foreach($products as $product)
-            {{view('market-pages.product-card', ['product' => $product])}}
+            {{ view('market-pages.components.product-card', ['product' => $product]) }}
         @endforeach
     </div>
 
@@ -16,7 +20,6 @@
     </div>
 
 </div>
-
 
 <script>
     function openModal(image, title, year, description) {
@@ -37,6 +40,9 @@
     }
 
     document.getElementById('productModal').addEventListener('click', function(e) {
-        if (e.target === this) closeModal();
+        if (e.target === this) {
+            closeModal();
+        }
     });
 </script>
+

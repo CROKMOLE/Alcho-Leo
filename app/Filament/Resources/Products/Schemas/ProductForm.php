@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Products\Schemas;
 
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
@@ -33,6 +34,11 @@ class ProductForm
                                 TextInput::make('year')
                                     ->numeric()
                                     ->required(),
+                                Select::make('tags')
+                                    ->relationship('tags', 'Name')
+                                    ->multiple()
+                                    ->preload()
+                                    ->searchable(),
                             ]),
                     ])->columns(2),
                 TextArea::make('description')
