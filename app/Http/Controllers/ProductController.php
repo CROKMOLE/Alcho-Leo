@@ -12,7 +12,6 @@ class ProductController extends Controller
     {
         $query = Product::with('tags');
 
-        // фильтрация по выбранным тегам (все теги)
         if ($request->has('tags') && is_array($request->tags) && count($request->tags) > 0) {
             foreach ($request->tags as $tagId) {
                 $query->whereHas('tags', function ($q) use ($tagId) {
@@ -21,7 +20,7 @@ class ProductController extends Controller
             }
         }
 
-        $products = $query->paginate(5)->withQueryString(); // сохраняем фильтры в пагинации
+        $products = $query->paginate(5)->withQueryString();
         $allTags = Tag::all();
 
         return view('market-skeleton', [
