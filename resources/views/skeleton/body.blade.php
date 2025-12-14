@@ -35,10 +35,6 @@
             EN
         </button>
     </div>
-    <div >
-
-    </div>
-
 </header>
 
 <div class="flex flex-1">
@@ -95,7 +91,7 @@
                     <a href="#" class="hover:text-white transition">YouTube</a>
                 </div>
             </div>
-            
+
 
             <!-- Solutions -->
             <div>
