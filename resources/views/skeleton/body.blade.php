@@ -69,7 +69,8 @@
 				overflow-hidden shadow-lg
 				flex items-center justify-center">
 
-			<img class="slideshow-image w-full h-full object-cover
+			<img src="{{asset('storage/ads/20250314_155253.jpg')}}"
+                class="slideshow-image w-full h-full object-cover
                transition-opacity duration-1000 opacity-0" alt="Alcohol image"/>
 		</div>
 	</aside>
@@ -81,7 +82,7 @@
         <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
 
             <!-- Левая колонка -->
-            <div class="md:col-span-2">
+            <div class="md:col-span-3">
                 <div class="flex items-center space-x-2 mb-4">
                     <div class="w-8 h-8 rounded-full bg-indigo-500"></div>
                 </div>
@@ -98,16 +99,16 @@
 
 
             <!-- Solutions -->
-            <div>
-                <h3 class="text-white font-semibold mb-4">Solutions</h3>
-                <ul class="space-y-3 text-sm">
-                    <li><a href="#" class="hover:text-white">Marketing</a></li>
-                    <li><a href="#" class="hover:text-white">Analytics</a></li>
-                    <li><a href="#" class="hover:text-white">Automation</a></li>
-                    <li><a href="#" class="hover:text-white">Commerce</a></li>
-                    <li><a href="#" class="hover:text-white">Insights</a></li>
-                </ul>
-            </div>
+{{--            <div>--}}
+{{--                <h3 class="text-white font-semibold mb-4">Solutions</h3>--}}
+{{--                <ul class="space-y-3 text-sm">--}}
+{{--                    <li><a href="#" class="hover:text-white">Marketing</a></li>--}}
+{{--                    <li><a href="#" class="hover:text-white">Analytics</a></li>--}}
+{{--                    <li><a href="#" class="hover:text-white">Automation</a></li>--}}
+{{--                    <li><a href="#" class="hover:text-white">Commerce</a></li>--}}
+{{--                    <li><a href="#" class="hover:text-white">Insights</a></li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
 
             <!-- Support -->
             <div>
@@ -123,7 +124,7 @@
             <div>
                 <h3 class="text-white font-semibold mb-4">Company</h3>
                 <ul class="space-y-3 text-sm">
-                    <li><a href="#" class="hover:text-white">About</a></li>
+                    <li><a href="#" class="hover:text-white">About Us</a></li>
                     <li><a href="#" class="hover:text-white">Blog</a></li>
                     <li><a href="#" class="hover:text-white">Jobs</a></li>
 {{--                    <li><a href="#" class="hover:text-white">Press</a></li>--}}

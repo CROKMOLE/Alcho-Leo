@@ -1,0 +1,2 @@
+upload_tm_dir=C:\laragon\tmp
+php artisan storage:link
