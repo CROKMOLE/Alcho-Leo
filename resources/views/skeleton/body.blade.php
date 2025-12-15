@@ -9,7 +9,7 @@
 
         <nav class="flex space-x-2">
             <button class="px-4 py-2 rounded bg-orange-400 dark:bg-orange-600 hover:bg-orange-300 dark:hover:bg-orange-500 transition font-medium">
-                Каталог 1
+                {{__('skeleton.home')}}
             </button>
             <button class="px-4 py-2 rounded bg-orange-400 dark:bg-orange-600 hover:bg-orange-300 dark:hover:bg-orange-500 transition font-medium">
                 Каталог 2
@@ -31,9 +31,13 @@
         </form>
 
         <!-- Язык -->
-        <button class="px-3 py-1 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition">
-            EN
-        </button>
+        <a href="{{ url('/lang/' . (app()->getLocale() === 'en' ? 'ru' : 'en')) }}"
+           class="px-3 py-1 rounded bg-white dark:bg-gray-800
+          text-gray-900 dark:text-gray-100 shadow
+          hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+            {{ strtoupper(app()->getLocale()) }}
+        </a>
+
     </div>
 </header>
 
@@ -109,9 +113,9 @@
             <div>
                 <h3 class="text-white font-semibold mb-4">Support</h3>
                 <ul class="space-y-3 text-sm">
-                    <li><a href="#" class="hover:text-white">Submit ticket</a></li>
-                    <li><a href="#" class="hover:text-white">Documentation</a></li>
-                    <li><a href="#" class="hover:text-white">Guides</a></li>
+                    <li><a href="#" class="hover:text-white">Contact Us</a></li>
+{{--                    <li><a href="#" class="hover:text-white">Documentation</a></li>--}}
+{{--                    <li><a href="#" class="hover:text-white">Guides</a></li>--}}
                 </ul>
             </div>
 
@@ -122,24 +126,24 @@
                     <li><a href="#" class="hover:text-white">About</a></li>
                     <li><a href="#" class="hover:text-white">Blog</a></li>
                     <li><a href="#" class="hover:text-white">Jobs</a></li>
-                    <li><a href="#" class="hover:text-white">Press</a></li>
+{{--                    <li><a href="#" class="hover:text-white">Press</a></li>--}}
                 </ul>
             </div>
 
             <!-- Legal -->
-            <div>
-                <h3 class="text-white font-semibold mb-4">Legal</h3>
-                <ul class="space-y-3 text-sm">
-                    <li><a href="#" class="hover:text-white">Terms of service</a></li>
-                    <li><a href="#" class="hover:text-white">Privacy policy</a></li>
-                    <li><a href="#" class="hover:text-white">License</a></li>
-                </ul>
-            </div>
+{{--            <div>--}}
+{{--                <h3 class="text-white font-semibold mb-4">Legal</h3>--}}
+{{--                <ul class="space-y-3 text-sm">--}}
+{{--                    <li><a href="#" class="hover:text-white">Terms of service</a></li>--}}
+{{--                    <li><a href="#" class="hover:text-white">Privacy policy</a></li>--}}
+{{--                    <li><a href="#" class="hover:text-white">License</a></li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
         </div>
 
         <!-- Нижняя линия -->
         <div class="border-t border-slate-700 mt-12 pt-6 text-sm text-slate-500">
-            © 2025 Your Company, Inc. All rights reserved.
+            © {{\Carbon\Carbon::now()->year}} Your Company, Inc. All rights reserved.
         </div>
     </div>
 </footer>
