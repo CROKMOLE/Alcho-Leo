@@ -2,13 +2,17 @@
 return [
     'top-bar' => [
         'home' => 'Главная',
-        'catalog' => '',
-        'ticket' => '',
+        'catalog' => 'Каталог',
+        'ticket' => 'Доабвить продукт',
     ],
     'contacts' => [
-        'facebook' => '',
-        'twitter' => '',
-        'instagram' => '',
-        'telegram' => '',
+        'facebook' => 'Facebook',
+        'twitter' => 'Twitter',
+        'instagram' => 'Instagram',
+        'telegram' => 'Telegram',
+    ],
+    'support' => [
+        'title' => 'Помощь',
+        'contact' => 'Свяжитесь с нами',
     ]
 ];

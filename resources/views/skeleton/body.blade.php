@@ -9,13 +9,13 @@
 
         <nav class="flex space-x-2">
             <button class="px-4 py-2 rounded bg-orange-400 dark:bg-orange-600 hover:bg-orange-300 dark:hover:bg-orange-500 transition font-medium">
-                {{__('skeleton.home')}}
+                {{__('skeleton.top-bar.home')}}
             </button>
             <button class="px-4 py-2 rounded bg-orange-400 dark:bg-orange-600 hover:bg-orange-300 dark:hover:bg-orange-500 transition font-medium">
-                Каталог 2
+                {{__('skeleton.top-bar.catalog')}}
             </button>
             <button class="px-4 py-2 rounded bg-orange-400 dark:bg-orange-600 hover:bg-orange-300 dark:hover:bg-orange-500 transition font-medium">
-                Каталог 3
+                {{__('skeleton.top-bar.ticket')}}
             </button>
         </nav>
     </div>
@@ -89,32 +89,17 @@
 
                 <!-- Соцсети -->
                 <div class="flex space-x-4 mt-6 text-slate-400">
-                    <a href="#" class="hover:text-white transition">Facebook</a>
-                    <a href="#" class="hover:text-white transition">Instagram</a>
-                    <a href="#" class="hover:text-white transition">Telegram</a>
-                    <a href="#" class="hover:text-white transition">Tiktok</a>
-                    <a href="#" class="hover:text-white transition">YouTube</a>
+                    <a href="#" class="hover:text-white transition">{{__('skeleton.contacts.facebook')}}</a>
+                    <a href="#" class="hover:text-white transition">{{__('skeleton.contacts.twitter')}}</a>
+                    <a href="#" class="hover:text-white transition">{{__('skeleton.contacts.instagram')}}</a>
+                    <a href="#" class="hover:text-white transition">{{__('skeleton.contacts.telegram')}}</a>
                 </div>
             </div>
 
-
-            <!-- Solutions -->
-{{--            <div>--}}
-{{--                <h3 class="text-white font-semibold mb-4">Solutions</h3>--}}
-{{--                <ul class="space-y-3 text-sm">--}}
-{{--                    <li><a href="#" class="hover:text-white">Marketing</a></li>--}}
-{{--                    <li><a href="#" class="hover:text-white">Analytics</a></li>--}}
-{{--                    <li><a href="#" class="hover:text-white">Automation</a></li>--}}
-{{--                    <li><a href="#" class="hover:text-white">Commerce</a></li>--}}
-{{--                    <li><a href="#" class="hover:text-white">Insights</a></li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-
-            <!-- Support -->
             <div>
-                <h3 class="text-white font-semibold mb-4">Support</h3>
+                <h3 class="text-white font-semibold mb-4">{{__('skeleton.support.title')}}</h3>
                 <ul class="space-y-3 text-sm">
-                    <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-white">{{__('skeleton.support.contact')}}</a></li>
 {{--                    <li><a href="#" class="hover:text-white">Documentation</a></li>--}}
 {{--                    <li><a href="#" class="hover:text-white">Guides</a></li>--}}
                 </ul>
