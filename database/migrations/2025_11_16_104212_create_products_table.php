@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title', 32);
             $table->integer('year');
             $table->text('description');
-            $table->json('picture');
+            $table->string('picture', 64);
             $table->timestamps();
             $table->softDeletes();
         });
