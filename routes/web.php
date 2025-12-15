@@ -8,22 +8,17 @@ use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
     return view('market-skeleton', [
-        'page' => 'market-pages.welcome'
+        'page' => 'market-pages.home'
     ]);
 });
 
-
-Route::get('/tt', function () {
-    return view('market-skeleton', [
-        'page' => 'market-pages.w'
-    ]);
-});
 
 Route::controller(ProductController::class)->group(function () {
 //    Route::get('/products', 'index');
     Route::get('/search', 'search');
     Route::get('/products', 'index')->name('products.index');
 });
+
 
 Route::post('/theme', function (Request $request) {
     $current = session('theme', 'light');
